@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+
+# Environment variables — SECRET FILE, GitHub par mat dalo!
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

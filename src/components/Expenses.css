@@ -1,0 +1,307 @@
+.expenses-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.expenses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d7a3e;
+  margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.total-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 12px;
+  border: 2px solid #bbf7d0;
+}
+
+.summary-icon {
+  color: #2d7a3e;
+  flex-shrink: 0;
+}
+
+.summary-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #166534;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d7a3e;
+}
+
+.expenses-controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #2d7a3e;
+  box-shadow: 0 0 0 3px rgba(45, 122, 62, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.filter-icon {
+  color: #666;
+  flex-shrink: 0;
+}
+
+.filter-select {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-select:focus {
+  border-color: #2d7a3e;
+  box-shadow: 0 0 0 3px rgba(45, 122, 62, 0.1);
+}
+
+.expenses-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+  overflow-x: auto;
+}
+
+.no-expenses {
+  padding: 60px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}
+
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expenses-table thead {
+  background: #f8faf8;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.expenses-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.expenses-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.expenses-table tbody tr:hover {
+  background-color: #f8faf8;
+}
+
+.expenses-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.expenses-table td {
+  padding: 16px;
+  font-size: 15px;
+  color: #333;
+}
+
+.expense-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.expense-group {
+  font-weight: 500;
+  color: #2d7a3e;
+}
+
+.expense-payer {
+  color: #666;
+}
+
+.expense-date {
+  color: #666;
+  white-space: nowrap;
+}
+
+.expense-amount {
+  font-weight: 700;
+  color: #2d7a3e;
+  font-size: 16px;
+}
+
+.expense-actions {
+  white-space: nowrap;
+}
+
+.delete-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  color: white;
+  transform: scale(1.1);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+.expenses-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 0;
+}
+
+.results-count {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .expenses-header {
+    flex-direction: column;
+  }
+
+  .total-summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 24px;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+  }
+
+  .expenses-controls {
+    flex-direction: column;
+  }
+
+  .search-box,
+  .filter-group {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .expenses-table th,
+  .expenses-table td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  .expenses-table th:nth-child(2),
+  .expenses-table td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .expenses-table th:nth-child(3),
+  .expenses-table td:nth-child(3) {
+    display: none;
+  }
+}
